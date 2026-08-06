@@ -304,22 +304,14 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
   color: var(--color-white);
 }
 
-.brand-logo .logo-dot {
-  width: 12px;
-  height: 12px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.brand-logo span.text-accent {
-  color: var(--color-accent);
+.brand-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-menu {

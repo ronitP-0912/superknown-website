@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Process Timeline Step Animations
+    // Process Timeline Step Animations (Reverses on scroll up & re-animates on scroll down)
     const processSteps = document.querySelectorAll('.process-step');
     processSteps.forEach((step, index) => {
       gsap.fromTo(step,
-        { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
+        { opacity: 0, x: index % 2 === 0 ? -60 : 60 },
         {
           opacity: 1,
           x: 0,
@@ -71,7 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: step,
-            start: 'top 80%'
+            start: 'top 85%',
+            end: 'bottom 15%',
+            toggleActions: 'play reverse play reverse'
           }
         }
       );

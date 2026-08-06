@@ -1156,6 +1156,10 @@ button {
   animation: marquee 25s linear infinite;
 }
 
+.clients-track.reverse {
+  animation: marqueeReverse 25s linear infinite;
+}
+
 .clients-track:hover {
   animation-play-state: paused;
 }
@@ -1163,6 +1167,11 @@ button {
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 .client-logo {
@@ -1180,12 +1189,18 @@ button {
    Testimonials Section
    ========================================================================== */
 
+.testimonials-slider .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
 .testimonial-card {
   background: var(--color-dark-card);
   padding: 36px;
   border-radius: var(--radius-card);
   border: 1px solid rgba(255, 255, 255, 0.08);
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

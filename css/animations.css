@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Superknown Animations Stylesheet
+   GSAP integration hooks, keyframes, micro-interactions, and scroll reveals
+   ========================================================================== */
+
+/* Keyframe Animations */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(141, 255, 0, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(141, 255, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(141, 255, 0, 0); }
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* GSAP Reveal Helper Classes */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-fade-in {
+  opacity: 0;
+}
+
+.reveal-scale-up {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+/* Smooth Transitions for Interactive Elements */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+.hover-zoom {
+  overflow: hidden;
+}
+
+.hover-zoom img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.08);
+}

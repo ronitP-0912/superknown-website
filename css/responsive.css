@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Superknown Responsive Stylesheet
+   Breakpoints: Desktop (>1024px), Laptop (768px-1024px), Tablet (480px-768px), Mobile (<480px)
+   ========================================================================== */
+
+/* Laptop & Tablet Adjustments (< 1024px) */
+@media screen and (max-width: 1024px) {
+  :root {
+    --section-padding: 80px;
+  }
+
+  .nav-menu {
+    display: none; /* Mobile navigation active */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .about-grid,
+  .why-grid,
+  .pbs-banner-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .about-image-wrapper {
+    max-height: 450px;
+  }
+
+  .services-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .services-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .service-tab {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* Tablet & Mobile (< 768px) */
+@media screen and (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .mission-vision-grid,
+  .counters-grid,
+  .pbs-features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Process Timeline Responsive Stack */
+  .process-timeline::before {
+    left: 20px;
+  }
+
+  .process-step {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .process-node {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    font-size: 1.6rem;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media screen and (max-width: 480px) {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .contact-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pbs-banner {
+    padding: var(--space-xl) var(--space-md);
+  }
+}

@@ -1290,38 +1290,36 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 24px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 20px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition: var(--transition-fast);
   flex-shrink: 0;
-  height: 80px;
-  width: 210px;
+  height: 60px;
 }
 
 .client-logo:hover {
-  background: #ffffff;
-  border-color: var(--color-accent);
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 12px 30px rgba(141, 255, 0, 0.35);
+  background: transparent;
+  transform: scale(1.12);
 }
 
 .client-logo-img {
-  max-height: 52px;
-  max-width: 170px;
+  height: 52px;
   width: auto;
-  height: auto;
+  max-width: 180px;
   object-fit: contain;
-  filter: none !important;
-  opacity: 1 !important;
-  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  transition: all 0.3s ease;
 }
 
 .client-logo:hover .client-logo-img {
-  transform: scale(1.06);
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(141, 255, 0, 0.7));
+  transform: scale(1.08);
 }
+
 
 
 /* ==========================================================================

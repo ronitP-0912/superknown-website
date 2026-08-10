@@ -1233,7 +1233,10 @@ button {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  padding: 20px 0;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .clients-marquee-container::before,
@@ -1241,9 +1244,9 @@ button {
   content: '';
   position: absolute;
   top: 0;
-  width: 120px;
+  width: 140px;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 }
 
@@ -1260,12 +1263,13 @@ button {
 .clients-track {
   display: inline-flex;
   align-items: center;
-  gap: 60px;
-  animation: marquee 25s linear infinite;
+  gap: 28px;
+  animation: marquee 30s linear infinite;
+  width: max-content;
 }
 
 .clients-track.reverse {
-  animation: marqueeReverse 25s linear infinite;
+  animation: marqueeReverse 30s linear infinite;
 }
 
 .clients-track:hover {
@@ -1286,22 +1290,33 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10px;
-  transition: var(--transition-fast);
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-card);
+  transition: var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.client-logo:hover {
+  background: rgba(141, 255, 0, 0.08);
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
 }
 
 .client-logo-img {
-  height: 48px;
+  height: 42px;
   width: auto;
-  max-width: 180px;
+  max-width: 160px;
   object-fit: contain;
-  filter: opacity(0.85);
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
   transition: var(--transition-fast);
 }
 
 .client-logo:hover .client-logo-img {
-  filter: opacity(1);
-  transform: scale(1.1);
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 /* ==========================================================================

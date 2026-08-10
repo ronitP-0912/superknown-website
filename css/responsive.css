@@ -47,71 +47,27 @@
     font-size: 0.95rem;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
+  .about-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counters-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Tablet & Mobile (< 768px) */
 @media screen and (max-width: 768px) {
-  :root {
-    --section-padding: 60px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .mission-vision-grid,
-  .counters-grid,
-  .pbs-features-list {
+  .why-features {
     grid-template-columns: 1fr;
   }
 
-  .portfolio-grid {
+  .counters-grid {
     grid-template-columns: 1fr;
-  }
-
-  /* Process Timeline Responsive Stack */
-  .process-timeline::before {
-    left: 20px;
-  }
-
-  .process-step {
-    width: 100%;
-    left: 0 !important;
-    padding-left: 60px !important;
-    padding-right: 0 !important;
-    text-align: left !important;
-  }
-
-  .process-node {
-    left: 0 !important;
-    right: auto !important;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-
-  .whatsapp-float {
-    width: 54px;
-    height: 54px;
-    font-size: 1.6rem;
-    bottom: 20px;
-    right: 20px;
   }
 }
 
@@ -142,4 +98,5 @@
     font-size: 2rem;
   }
 }
+
 

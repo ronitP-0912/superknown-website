@@ -1290,34 +1290,39 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 28px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-card);
-  transition: var(--transition-normal);
+  padding: 14px 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   flex-shrink: 0;
+  height: 80px;
+  width: 210px;
 }
 
 .client-logo:hover {
-  background: rgba(141, 255, 0, 0.08);
+  background: #ffffff;
   border-color: var(--color-accent);
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(141, 255, 0, 0.35);
 }
 
 .client-logo-img {
-  height: 42px;
+  max-height: 52px;
+  max-width: 170px;
   width: auto;
-  max-width: 160px;
+  height: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
-  transition: var(--transition-fast);
+  filter: none !important;
+  opacity: 1 !important;
+  transition: transform 0.3s ease;
 }
 
 .client-logo:hover .client-logo-img {
-  opacity: 1;
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
+
 
 /* ==========================================================================
    Testimonials Section

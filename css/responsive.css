@@ -130,7 +130,16 @@
     grid-template-columns: 1fr;
   }
 
-  .pbs-banner {
-    padding: var(--space-xl) var(--space-md);
+  .purpose-promise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-card {
+    padding: 30px 20px;
+  }
+
+  .legal-hero-title {
+    font-size: 2rem;
   }
 }
+

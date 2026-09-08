@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: step,
-            start: 'top 85%',
-            end: 'bottom 15%',
+            start: 'top 75%',
+            end: 'top 10%',
             toggleActions: 'play reverse play reverse'
           }
         }
